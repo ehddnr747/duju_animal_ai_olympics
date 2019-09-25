@@ -50,7 +50,7 @@ def train(policy, Qnet, Value_main, Value_target, replay_buffer, batch_size, alp
 
     V_loss = MSE(v_main, y_v)
     Q1_loss = MSE(q1, y_q)
-    Q2_loss = MSE(q2, y_q)
+    Q2_loss = MSE(q2, y_q) git test
 
     PI_loss = (-1.0) * torch.mean(Qnet.forward(s_batch, pi), dim=1, keepdim=True) + alpha * logp_pi
 
