@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+import numpy as np
 
 
 def soft_target_update(main, target, tau):
@@ -24,7 +25,7 @@ def target_initialize(main, target):
 
 
 
-def train(policy, Qnet, Value_main, Value_target, replay_buffer, batch_size):
+def train(policy, Qnet, Value_main, Value_target, replay_buffer, batch_size, alpha, gamma):
 
     device = policy.device
 
@@ -34,7 +35,40 @@ def train(policy, Qnet, Value_main, Value_target, replay_buffer, batch_size):
     r_batch = torch.FloatTensor(r_batch).to(device)
     s2_batch = torch.FloatTensor(s2_batch).to(device)
 
-    
+    MSE = nn.MSELoss()
 
 
-def evaluate(policy, env, video_info = None):
+    q1, q2 = Qnet.forward(s_batch, a_batch)
+    v_main = Value_main.forward(s_batch)
+
+    pi, logp_pi = policy.forward(s_batch)
+    pi_no_grad = pi.detach()
+
+    with torch.no_grad():
+        y_q = r_batch + gamma * Value_target.forward(s2_batch)
+        y_v = torch.min(Qnet.forward(s_batch, pi_no_grad),dim=1,keepdim=True) + alpha * logp_pi  # The shape must be [Batch, 1]
+
+    V_loss = MSE(v_main, y_v)
+    Q1_loss = MSE(q1, y_q)
+    Q2_loss = MSE(q2, y_q)
+
+    PI_loss = (-1.0) * torch.mean(Qnet.forward(s_batch, pi), dim=1, keepdim=True) + alpha * logp_pi
+
+
+    Value_main.optimizer.zero_grad()
+    V_loss.backward()
+    torch.nn.utils.clip_grad_value_(Value_main.parameters(), 1.0)
+    Value_main.optimizer.step()
+
+    Qnet.optimizer.zero_grad()
+    Q1_loss.backward()
+    Q2_loss.backward()
+    torch.nn.utils.clip_grad_value_(Qnet.parameters(), 1.0)
+    Qnet.optimizer.step()
+
+    policy.optimizer.zero_grad()
+    PI_loss.backward()
+    torch.nn.utils.clip_grad_value_(policy.parameters(), 1.0)
+    policy.optimizer.step()
+
+    return np.max(Value_main.detach().cpu().numpy())
