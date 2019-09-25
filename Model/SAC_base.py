@@ -41,7 +41,7 @@ def train(policy, Qnet, Value_main, Value_target, replay_buffer, batch_size, alp
     q1, q2 = Qnet.forward(s_batch, a_batch)
     v_main = Value_main.forward(s_batch)
 
-    pi, logp_pi = policy.forward(s_batch)
+    pi, logp_pi = policy.sample_with_logp(s_batch) # policy should sample not forward GOGO.. change gogo
     pi_no_grad = pi.detach()
 
     with torch.no_grad():
