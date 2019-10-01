@@ -1,7 +1,7 @@
 from Model.ReplayBuffer import ReplayBuffer
-from Model.vanilla_policy_net import VanillaSACPolicy
-from Model.vanilla_q_net import VanillaSACQNet
-from Model.vanilla_v_net import VanillaSACValue
+from Model.policy_net import VanillaSACPolicy
+from Model.q_net import VanillaSACQNet
+from Model.v_net import VanillaSACValue
 from Model.SAC_base import target_initialize
 from Model.SAC_base import train
 import lib_duju.utils as duju_utils
@@ -58,15 +58,36 @@ for epi_i in range(1, max_episode + 1):
         s = s2
         ep_reward += r
 
-        frame = env.physics.render(camera_id=0,width=640,height=480)
-        cv2.imshow("test",frame)
-        cv2.waitKey(1)
+    for _ in range(1000):
+        max_v = train(policy, QNet, VNet_main, VNet_target, replay_buffer, batch_size=128, alpha=0.05, gamma=0.99)
 
-    for _ in range(100):
-        max_v = train(policy, QNet, VNet_main, VNet_target, replay_buffer, batch_size=128, alpha=0.2, gamma=0.99)
+    print(ep_reward, "***", max_v)
 
-    print(ep_reward, "***",max_v)
+    timestep = env.reset()
+    end, _, _, s = timestep
+    end = end.last()
+    s = duju_utils.state_1d_flat(s)
 
+    eval_ep_reward = 0.0
+
+    if (epi_i % 1) == 0 :
+        while not end:
+            a = policy.mean_action(torch.FloatTensor(s).to(device).view(1, -1)).cpu().numpy()[0]
+            timestep = env.step(a)
+
+            end, r, _, s2 = timestep
+            end = end.last()
+            s2 = duju_utils.state_1d_flat(s2)
+
+            s = s2
+            eval_ep_reward += r
+
+            frame = env.physics.render(camera_id=0, width=640, height=480) #[height, width, channel]
+            cv2.imshow("test", frame)
+            cv2.waitKey(1)
+
+
+        print("Eval! *** ", eval_ep_reward)
 
 cv2.destroyAllWindows()
 

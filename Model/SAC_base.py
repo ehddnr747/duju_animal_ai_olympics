@@ -46,13 +46,13 @@ def train(policy, Qnet, Value_main, Value_target, replay_buffer, batch_size, alp
 
     with torch.no_grad():
         y_q = r_batch + gamma * Value_target.forward(s2_batch)
-        y_v = torch.min(torch.cat(list(Qnet.forward(s_batch, pi_no_grad)),dim=1),dim=1,keepdim=True)[0] + alpha * logp_pi  # The shape must be [Batch, 1]
+        y_v = torch.min(torch.cat(list(Qnet.forward(s_batch, pi_no_grad)),dim=1),dim=1,keepdim=True)[0] - alpha * logp_pi  # The shape must be [Batch, 1]
 
     V_loss = MSE(v_main, y_v)
     Q1_loss = MSE(q1, y_q)
     Q2_loss = MSE(q2, y_q)
 
-    PI_loss = torch.mean((-1.0) * torch.mean(torch.cat(list(Qnet.forward(s_batch, pi_no_grad)),dim=1), dim=1, keepdim=True) + alpha * logp_pi)
+    PI_loss = torch.mean((-1.0) * torch.mean(torch.cat(list(Qnet.forward(s_batch, pi)),dim=1), dim=1, keepdim=True) + alpha * logp_pi)
 
 
 
