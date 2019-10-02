@@ -29,3 +29,40 @@ class VanillaSACValue(nn.Module):
 
         return x
 
+class ConvSACValue(nn.Module):
+    def __init__(self, step_channelsize, height, width, lr, device):
+        super(ConvSACValue, self).__init__()
+
+        self.step_channelsize = step_channelsize
+        self.height = height
+        self.width = width
+        self.out_channels = 16
+
+        self.conv_flatten_size = int(height * width * self.out_channels / (16 ** 2))
+
+        self.actor_lr = lr
+        self.device = device
+
+        self.conv1 = torch.nn.Conv2d(in_channels=self.step_channelsize, out_channels=64,
+                                     kernel_size=7, stride=4, padding=3).to(device)
+        self.conv2 = torch.nn.Conv2d(in_channels=64, out_channels=self.out_channels,
+                                     kernel_size=7, stride=4, padding=3).to(device)
+
+        self.fc1 = nn.Linear(self.conv_flatten_size, 1).to(device)
+
+        nn.init.uniform_(tensor=self.fc1.weight, a = -3e-3, b=3e-3)
+        nn.init.uniform_(tensor=self.fc1.bias, a=-3e-3, b=3e-3)
+
+        self.optimizer = optim.Adam(self.parameters(),lr)
+
+
+    def forward(self, x):
+
+        x = F.relu(self.conv1(x))
+        x = F.relu(self.conv2(x))
+
+        x = x.view(-1, self.conv_flatten_size)
+
+        x = self.fc1(x)
+
+        return x

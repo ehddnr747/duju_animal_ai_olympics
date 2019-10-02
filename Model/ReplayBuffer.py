@@ -1,6 +1,7 @@
 from collections import deque
 import random
 import numpy as np
+from Model.ImageBuffer import ImageBuffer
 
 class ReplayBuffer(object):
 

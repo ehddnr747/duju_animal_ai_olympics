@@ -58,7 +58,8 @@ for epi_i in range(1, max_episode + 1):
         s = s2
         ep_reward += r
 
-    for _ in range(1000):
+    for _idx in range(1000):
+        #print(_idx)
         max_v = train(policy, QNet, VNet_main, VNet_target, replay_buffer, batch_size=128, alpha=0.05, gamma=0.99)
 
     print(ep_reward, "***", max_v)

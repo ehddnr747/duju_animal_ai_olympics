@@ -73,27 +73,24 @@ class VanillaSACPolicy(nn.Module):
 
 
 class ConvSACPolicy(nn.Module):
-    def __init__(self, stepsize, height, width, action_dim, lr, device):
-        super(VanillaSACPolicy, self).__init__()
+    def __init__(self, step_channelsize, height, width, action_dim, lr, device):
+        super(ConvSACPolicy, self).__init__()
 
-        self.stepsize = stepsize
+        self.step_channelsize = step_channelsize
         self.height = height
         self.width = width
+        self.out_channels = 16
 
-        self.conv_flatten_size = stepsize * height * width * 32 / (16 ** 2)
+        self.conv_flatten_size = int(height * width * self.out_channels / (16 ** 2))
 
         self.action_dim = action_dim
         self.actor_lr = lr
         self.device = device
 
-        self.conv1 = torch.nn.Conv2d(in_channels=self.stepsize, out_channels=256,
-                                kernel_size=3, stride=2, padding=1)
-        self.conv2 = torch.nn.Conv2d(in_channels=256, out_channels=128,
-                                kernel_size=3, stride=2, padding=1)
-        self.conv3 = torch.nn.Conv2d(in_channels=128, out_channels=64,
-                                kernel_size=3, stride=2, padding=1)
-        self.conv4 = torch.nn.Conv2d(in_channels=64, out_channels=32,
-                                kernel_size=3, stride=2, padding=1)
+        self.conv1 = torch.nn.Conv2d(in_channels=self.step_channelsize, out_channels=64,
+                                kernel_size=7, stride=4, padding=3).to(device)
+        self.conv2 = torch.nn.Conv2d(in_channels=64, out_channels=self.out_channels,
+                                kernel_size=7, stride=4, padding=3).to(device)
 
         self.mu = nn.Linear(self.conv_flatten_size, action_dim).to(device)
         self.log_std = nn.Linear(self.conv_flatten_size, action_dim).to(device)
@@ -108,8 +105,10 @@ class ConvSACPolicy(nn.Module):
 
 
     def forward(self, x):
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
+        x = F.relu(self.conv1(x))
+        x = F.relu(self.conv2(x))
+
+        x = x.view(-1,self.conv_flatten_size)
 
         mu = self.mu(x)
         log_std = self.log_std(x)

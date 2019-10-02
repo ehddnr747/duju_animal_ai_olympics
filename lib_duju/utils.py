@@ -25,3 +25,13 @@ def state_1d_flat(ob_dict):
         result.extend(list(np.reshape(k,[-1])))
 
     return np.array(result,dtype=np.float32)
+
+
+# def dm_frame_preprocess(frame):
+#     # Dim of frame [height, width, channel]
+#
+#     r_frame = np.moveaxis(frame, [0,1,2], [1,2,0])
+#     r_frame = (r_frame / 128.0) - 1.0
+#
+#     # Return [channel, height, width]
+#     return r_frame
