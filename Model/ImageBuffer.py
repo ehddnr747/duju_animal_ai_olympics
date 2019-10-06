@@ -18,16 +18,14 @@ class ImageBuffer(object):
 
         assert self.stepsize <= self.buffer_size
 
-        self.start_adjust = (self.stepsize - 1)
         self.full_count = 0
-
-        for _ in range(stepsize):
-            self.buffer.append(np.zeros([channel_size,height,width]))
 
 
     # [height, width, channel]
     def dm_add(self, frame):
         frame = np.moveaxis(frame, [0, 1, 2], [1, 2, 0])
+        frame = (frame / 128.0) - 1.0
+
         if self.count < self.buffer_size:
             self.count += 1
             self.buffer.append(frame)
@@ -40,13 +38,13 @@ class ImageBuffer(object):
         assert idx > 0 and idx <= self.count + self.full_count
 
         if self.count < self.buffer_size:
-            temp_idx = idx + self.start_adjust
+            temp_idx = idx
         else:
-            temp_idx = idx + self.start_adjust - self.full_count
+            temp_idx = idx - self.full_count
 
-        assert temp_idx > self.start_adjust, "temp_idx : " + str(temp_idx) + "  self.start_adjust : " +str(self.start_adjust)
+        assert temp_idx > 0, "temp_idx : " + str(temp_idx)
 
-        return_array = np.concatenate(self.buffer[temp_idx - self.start_adjust: temp_idx + 1], axis=0)
+        return_array = np.concatenate(self.buffer[temp_idx - self.stepsize: temp_idx], axis=0)
 
         assert return_array.shape == (self.step_channelsize, self.height, self.width)
 

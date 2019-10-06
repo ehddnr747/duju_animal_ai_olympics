@@ -1,4 +1,5 @@
 import numpy as np
+import torch
 
 
 
@@ -35,3 +36,22 @@ def state_1d_flat(ob_dict):
 #
 #     # Return [channel, height, width]
 #     return r_frame
+
+
+def torch_network_save(net, path):
+    optimizer = net.optimizer.state_dict()
+    parameters = net.state_dict()
+
+    torch.save(
+        {
+            'model_state_dict' : parameters,
+            'optimizer_state_dict' : optimizer
+        }, path)
+
+def torch_network_load(net, path, device=torch.device("cuda")):
+    load_dict = torch.load(path,device)
+    parameters = load_dict["model_state_dict"]
+    optimizer = load_dict["optimizer_state_dict"]
+
+    net.load_state_dict(parameters)
+    net.optimizer.load_state_dict(optimizer)

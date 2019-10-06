@@ -47,6 +47,7 @@ def train(policy, Qnet, Value_main, Value_target, replay_buffer, batch_size, alp
     with torch.no_grad():
         y_q = r_batch + gamma * Value_target.forward(s2_batch)
         y_v = torch.min(torch.cat(list(Qnet.forward(s_batch, pi_no_grad)),dim=1),dim=1,keepdim=True)[0] - alpha * logp_pi  # The shape must be [Batch, 1]
+        assert y_v.shape == (batch_size, 1) and y_q.shape == (batch_size, 1)
 
     V_loss = MSE(v_main, y_v)
     Q1_loss = MSE(q1, y_q)
@@ -99,15 +100,24 @@ def conv_train(policy, Qnet, Value_main, Value_target, replay_buffer, image_buff
     s_batch = torch.FloatTensor(np.array(s1_batch)).to(device)
     s2_batch = torch.FloatTensor(np.array(s2_batch)).to(device)
 
+    #print(a_batch)
+    #print(r_batch)
+    #print(s_batch)
+    #print(s2_batch)
 
     MSE = nn.MSELoss()
 
 
     q1, q2 = Qnet.forward(s_batch, a_batch)
+    #print("q1",q1,"q2",q2)
     v_main = Value_main.forward(s_batch)
+    #print("v_mean", v_main)
 
     pi, logp_pi = policy.sample_with_logp(s_batch)
+    #print("pi", pi, "logp_pi", logp_pi)
     pi_no_grad = pi.detach()
+
+    #print(policy.conv2.weight.shape)
 
     with torch.no_grad():
         y_q = r_batch + gamma * Value_target.forward(s2_batch)
@@ -118,7 +128,6 @@ def conv_train(policy, Qnet, Value_main, Value_target, replay_buffer, image_buff
     Q2_loss = MSE(q2, y_q)
 
     PI_loss = torch.mean((-1.0) * torch.mean(torch.cat(list(Qnet.forward(s_batch, pi)),dim=1), dim=1, keepdim=True) + alpha * logp_pi)
-
 
 
     Value_main.optimizer.zero_grad()

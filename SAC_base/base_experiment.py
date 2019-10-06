@@ -36,6 +36,7 @@ target_initialize(VNet_main, VNet_target)
 max_episode = 1000
 
 for epi_i in range(1, max_episode + 1):
+    print(epi_i)
 
     timestep = env.reset()
     ep_reward = 0.0
@@ -60,7 +61,7 @@ for epi_i in range(1, max_episode + 1):
 
     for _idx in range(1000):
         #print(_idx)
-        max_v = train(policy, QNet, VNet_main, VNet_target, replay_buffer, batch_size=128, alpha=0.05, gamma=0.99)
+        max_v = train(policy, QNet, VNet_main, VNet_target, replay_buffer, batch_size=128, alpha=0.2, gamma=0.99)
 
     print(ep_reward, "***", max_v)
 
@@ -70,10 +71,13 @@ for epi_i in range(1, max_episode + 1):
     s = duju_utils.state_1d_flat(s)
 
     eval_ep_reward = 0.0
+    eval_action = []
 
     if (epi_i % 1) == 0 :
         while not end:
             a = policy.mean_action(torch.FloatTensor(s).to(device).view(1, -1)).cpu().numpy()[0]
+            eval_action.append(a)
+
             timestep = env.step(a)
 
             end, r, _, s2 = timestep
@@ -89,6 +93,7 @@ for epi_i in range(1, max_episode + 1):
 
 
         print("Eval! *** ", eval_ep_reward)
+        print(eval_action)
 
 cv2.destroyAllWindows()
 
