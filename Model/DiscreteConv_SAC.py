@@ -6,6 +6,68 @@ from torch.distributions.categorical import Categorical
 from Model.SAC_base import soft_target_update
 
 
+class DiscreteConvSAC(nn.Module):
+    def __init__(self, state_dim, action_dim, lr, device):
+        super(DiscreteConvSAC, self).__init__()
+
+        self.state_dim = state_dim
+        self.action_dim = action_dim
+        self.lr = lr
+        self.device = device
+
+        # Q1
+        self.fc1 = nn.Linear(state_dim, 256).to(device)
+        self.fc2 = nn.Linear(256, 256).to(device)
+        self.fc3 = nn.Linear(256, action_dim).to(device)
+
+        # Q2
+        self.fc4 = nn.Linear(state_dim, 256).to(device)
+        self.fc5 = nn.Linear(256, 256).to(device)
+        self.fc6 = nn.Linear(256, action_dim).to(device)
+
+        self.optimizer = optim.Adam(self.parameters(), lr)
+
+    def forward(self, x):
+        # dim x : [batch, state_dim]
+        assert len(x.shape) == 2
+
+        x1 = F.relu(self.fc1(x))
+        x1 = F.relu(self.fc2(x1))
+        x1 = self.fc3(x1)
+
+        x2 = F.relu(self.fc4(x))
+        x2 = F.relu(self.fc5(x2))
+        x2 = self.fc6(x2)
+
+        return x1, x2
+
+    def get_mean_distribution_from_Qs(self, q1, q2):
+        return (F.softmax(q1, 1) + F.softmax(q2, 1)) / 2.0
+
+    def get_stochastic_action(self, x):
+        with torch.no_grad():
+            assert len(x.shape) == 2
+
+            q1, q2 = self.forward(x)
+            probs = self.get_mean_distribution_from_Qs(q1, q2)
+
+            action = Categorical(probs).sample()
+            assert action.shape == (1,)
+
+            return action.detach().cpu().numpy()[0]
+
+    def get_max_action(self, x):
+        with torch.no_grad():
+            assert len(x.shape) == 2
+
+            q1, q2 = self.forward(x)
+            probs = self.get_mean_distribution_from_Qs(q1, q2)
+
+            action = torch.argmax(probs, dim=1)
+            assert action.shape == (1,)
+
+            return action.detach().cpu().numpy()[0]
+
 class DiscreteSAC(nn.Module):
     def __init__(self, state_dim, action_dim, lr, device):
         super(DiscreteSAC, self).__init__()
@@ -69,7 +131,7 @@ class DiscreteSAC(nn.Module):
             return action.detach().cpu().numpy()[0]
 
 
-def train_discrete_SAC(Q_main, Q_target, replay_buffer, batch_size, gamma):
+def train_discrete_Conv_SAC(Q_main, Q_target, replay_buffer, batch_size, gamma):
     device = Q_main.device
     state_dim = Q_main.state_dim
     action_dim = Q_main.action_dim
