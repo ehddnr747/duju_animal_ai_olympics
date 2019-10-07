@@ -1,0 +1,831 @@
+/home/duju/cd2018-2,p3.5/bin/python3 /home/duju/animal_ai_olympics/duju_animal_ai_olympics/SAC_base/discrete_dm_experiment.py
+1
+23.115976421540914 *** (tensor(4.3769, device='cuda:0'), tensor(4.3495, device='cuda:0'))
+Eval! ***  198.4735355590952
+2
+27.099188636629915 *** (tensor(7.0289, device='cuda:0'), tensor(7.0131, device='cuda:0'))
+Eval! ***  251.11930769235587
+3
+60.90277514900335 *** (tensor(12.3054, device='cuda:0'), tensor(12.2830, device='cuda:0'))
+Eval! ***  177.622674284389
+4
+22.756480591576832 *** (tensor(15.4691, device='cuda:0'), tensor(15.3915, device='cuda:0'))
+Eval! ***  154.05437581982707
+5
+23.392744867811427 *** (tensor(14.9184, device='cuda:0'), tensor(14.9929, device='cuda:0'))
+Eval! ***  173.61674402799795
+6
+41.936542111925625 *** (tensor(20.7766, device='cuda:0'), tensor(20.6771, device='cuda:0'))
+Eval! ***  180.7051579856915
+7
+13.987274319857272 *** (tensor(22.7376, device='cuda:0'), tensor(22.5720, device='cuda:0'))
+Eval! ***  178.7598185732813
+8
+29.66977320431579 *** (tensor(25.0653, device='cuda:0'), tensor(25.2176, device='cuda:0'))
+Eval! ***  204.04305574266093
+9
+43.23075337090822 *** (tensor(24.5670, device='cuda:0'), tensor(24.3444, device='cuda:0'))
+Eval! ***  125.83245497580165
+10
+112.46791054837787 *** (tensor(43.2424, device='cuda:0'), tensor(43.3244, device='cuda:0'))
+Eval! ***  118.50067619133245
+11
+88.33950978234733 *** (tensor(43.5919, device='cuda:0'), tensor(43.5556, device='cuda:0'))
+Eval! ***  186.7545237772998
+12
+22.663305838147853 *** (tensor(47.6015, device='cuda:0'), tensor(47.2692, device='cuda:0'))
+Eval! ***  168.848226762689
+13
+57.611187189620495 *** (tensor(46.7743, device='cuda:0'), tensor(46.5772, device='cuda:0'))
+Eval! ***  166.6865340768523
+14
+15.216529425206843 *** (tensor(55.0045, device='cuda:0'), tensor(55.3899, device='cuda:0'))
+Eval! ***  145.95013165695295
+15
+43.99963373655207 *** (tensor(64.9222, device='cuda:0'), tensor(64.6775, device='cuda:0'))
+Eval! ***  184.90713575411112
+16
+20.83481070631242 *** (tensor(78.5419, device='cuda:0'), tensor(78.3450, device='cuda:0'))
+Eval! ***  194.5817267597796
+17
+123.17504167022858 *** (tensor(74.0611, device='cuda:0'), tensor(74.2175, device='cuda:0'))
+Eval! ***  0.013024217166136267
+18
+19.97893760214915 *** (tensor(75.2276, device='cuda:0'), tensor(75.1227, device='cuda:0'))
+Eval! ***  179.86162714359727
+19
+121.94818008717316 *** (tensor(99.9275, device='cuda:0'), tensor(99.1714, device='cuda:0'))
+Eval! ***  161.57626653577645
+20
+111.01446584816082 *** (tensor(75.5985, device='cuda:0'), tensor(75.7179, device='cuda:0'))
+Eval! ***  230.63989707046588
+21
+71.92168601720752 *** (tensor(89.0974, device='cuda:0'), tensor(88.8795, device='cuda:0'))
+Eval! ***  181.1011245836352
+22
+270.41948298744137 *** (tensor(117.5112, device='cuda:0'), tensor(118.0243, device='cuda:0'))
+Eval! ***  177.4394388063397
+23
+101.18661923247812 *** (tensor(112.8511, device='cuda:0'), tensor(112.8179, device='cuda:0'))
+Eval! ***  147.41151655505706
+24
+211.2989243684198 *** (tensor(117.9311, device='cuda:0'), tensor(117.4952, device='cuda:0'))
+Eval! ***  150.82977803603387
+25
+233.7755647465283 *** (tensor(136.8304, device='cuda:0'), tensor(136.7470, device='cuda:0'))
+Eval! ***  173.15607425093356
+26
+176.79579622607582 *** (tensor(131.7924, device='cuda:0'), tensor(131.0259, device='cuda:0'))
+Eval! ***  0.0006306076417164808
+27
+235.33852156763015 *** (tensor(148.8267, device='cuda:0'), tensor(148.8221, device='cuda:0'))
+Eval! ***  178.34231054328015
+28
+158.6003341578594 *** (tensor(148.9791, device='cuda:0'), tensor(149.8014, device='cuda:0'))
+Eval! ***  270.54704448809235
+29
+126.92269917152038 *** (tensor(168.1551, device='cuda:0'), tensor(168.3342, device='cuda:0'))
+Eval! ***  234.9440697412289
+30
+242.1957040489619 *** (tensor(166.4644, device='cuda:0'), tensor(165.7540, device='cuda:0'))
+Eval! ***  213.25248086625507
+31
+90.49236418587935 *** (tensor(169.8652, device='cuda:0'), tensor(169.8378, device='cuda:0'))
+Eval! ***  368.7678706515419
+32
+125.19014911538487 *** (tensor(162.3605, device='cuda:0'), tensor(162.5517, device='cuda:0'))
+Eval! ***  198.9858693079597
+33
+252.808395820797 *** (tensor(195.1422, device='cuda:0'), tensor(196.0152, device='cuda:0'))
+Eval! ***  244.74574986681296
+34
+143.44173325333028 *** (tensor(192.4556, device='cuda:0'), tensor(192.7175, device='cuda:0'))
+Eval! ***  195.69534787406977
+35
+299.74615902525187 *** (tensor(188.7942, device='cuda:0'), tensor(189.5219, device='cuda:0'))
+Eval! ***  213.56544885242576
+36
+211.41801981620426 *** (tensor(205.4074, device='cuda:0'), tensor(205.8708, device='cuda:0'))
+Eval! ***  172.85019792962044
+37
+323.45918704549075 *** (tensor(233.4674, device='cuda:0'), tensor(232.9815, device='cuda:0'))
+Eval! ***  190.4982055340291
+38
+307.77455883640386 *** (tensor(226.1362, device='cuda:0'), tensor(226.3450, device='cuda:0'))
+Eval! ***  244.92146256242097
+39
+273.2634708472355 *** (tensor(247.5390, device='cuda:0'), tensor(248.1669, device='cuda:0'))
+Eval! ***  198.3805455858794
+40
+234.75323646929974 *** (tensor(246.3185, device='cuda:0'), tensor(246.1427, device='cuda:0'))
+Eval! ***  440.17681514362096
+41
+276.5589838253284 *** (tensor(239.7764, device='cuda:0'), tensor(240.4896, device='cuda:0'))
+Eval! ***  168.4651950050357
+42
+295.7193872413492 *** (tensor(260.4828, device='cuda:0'), tensor(261.8267, device='cuda:0'))
+Eval! ***  213.72087163468726
+43
+449.0917823014479 *** (tensor(283.9018, device='cuda:0'), tensor(283.6158, device='cuda:0'))
+Eval! ***  371.9625756596787
+44
+300.79010049994014 *** (tensor(291.0624, device='cuda:0'), tensor(290.9606, device='cuda:0'))
+Eval! ***  179.0712977010773
+45
+451.3742133403078 *** (tensor(272.9003, device='cuda:0'), tensor(273.4961, device='cuda:0'))
+Eval! ***  186.9939255965992
+46
+213.6450986585236 *** (tensor(298.0515, device='cuda:0'), tensor(297.5816, device='cuda:0'))
+Eval! ***  342.0926412375063
+47
+259.2438344562239 *** (tensor(300.8041, device='cuda:0'), tensor(300.7600, device='cuda:0'))
+Eval! ***  197.71687708849365
+48
+344.29004407574064 *** (tensor(311.2067, device='cuda:0'), tensor(310.8655, device='cuda:0'))
+Eval! ***  447.81910579357276
+49
+268.1332890705558 *** (tensor(315.9732, device='cuda:0'), tensor(316.9854, device='cuda:0'))
+Eval! ***  153.8302221009503
+50
+198.42766771673013 *** (tensor(335.7444, device='cuda:0'), tensor(334.7284, device='cuda:0'))
+Eval! ***  159.0952732404681
+51
+287.96142003752004 *** (tensor(318.5965, device='cuda:0'), tensor(318.2183, device='cuda:0'))
+Eval! ***  271.51117857550395
+52
+317.0018129134624 *** (tensor(353.7328, device='cuda:0'), tensor(353.0665, device='cuda:0'))
+Eval! ***  182.6854800766728
+53
+235.33911202052877 *** (tensor(361.6082, device='cuda:0'), tensor(361.9188, device='cuda:0'))
+Eval! ***  175.9127576090095
+54
+264.52544655631925 *** (tensor(359.9778, device='cuda:0'), tensor(361.8819, device='cuda:0'))
+Eval! ***  168.16546717530537
+55
+245.66048214464539 *** (tensor(376.8248, device='cuda:0'), tensor(375.0532, device='cuda:0'))
+Eval! ***  165.2708792187813
+56
+398.8989835027588 *** (tensor(370.4594, device='cuda:0'), tensor(367.9156, device='cuda:0'))
+Eval! ***  199.41856761062652
+57
+298.18343969523545 *** (tensor(354.6952, device='cuda:0'), tensor(355.0710, device='cuda:0'))
+Eval! ***  179.7860736916132
+58
+330.7189835830407 *** (tensor(379.7087, device='cuda:0'), tensor(381.1125, device='cuda:0'))
+Eval! ***  292.8276758257642
+59
+234.34975905543672 *** (tensor(381.7196, device='cuda:0'), tensor(379.5965, device='cuda:0'))
+Eval! ***  170.852471236622
+60
+384.91206661949326 *** (tensor(386.6309, device='cuda:0'), tensor(386.8638, device='cuda:0'))
+Eval! ***  203.86399417708958
+61
+408.02475152233694 *** (tensor(408.0024, device='cuda:0'), tensor(407.5041, device='cuda:0'))
+Eval! ***  141.78141400852172
+62
+309.97481026636893 *** (tensor(375.9741, device='cuda:0'), tensor(375.2896, device='cuda:0'))
+Eval! ***  188.09305634359674
+63
+442.11849101466214 *** (tensor(418.1229, device='cuda:0'), tensor(417.6807, device='cuda:0'))
+Eval! ***  441.04527924343597
+64
+345.9254246433325 *** (tensor(418.8341, device='cuda:0'), tensor(419.4532, device='cuda:0'))
+Eval! ***  444.41609020624446
+65
+454.41225261651454 *** (tensor(426.7745, device='cuda:0'), tensor(427.2298, device='cuda:0'))
+Eval! ***  189.9897818269579
+66
+364.4809561489939 *** (tensor(415.8022, device='cuda:0'), tensor(417.2602, device='cuda:0'))
+Eval! ***  179.90436286262639
+67
+341.8105503365226 *** (tensor(427.9552, device='cuda:0'), tensor(428.3853, device='cuda:0'))
+Eval! ***  498.40301506667714
+68
+543.0204873436785 *** (tensor(456.8835, device='cuda:0'), tensor(457.7457, device='cuda:0'))
+Eval! ***  342.12174319282514
+69
+437.36261315869206 *** (tensor(418.1475, device='cuda:0'), tensor(418.7007, device='cuda:0'))
+Eval! ***  512.7416997272734
+70
+437.19585671885625 *** (tensor(455.9475, device='cuda:0'), tensor(453.4431, device='cuda:0'))
+Eval! ***  454.1683997573098
+71
+406.1914639612588 *** (tensor(449.5455, device='cuda:0'), tensor(450.5285, device='cuda:0'))
+Eval! ***  395.34669072753906
+72
+406.54410871751134 *** (tensor(477.2200, device='cuda:0'), tensor(478.5034, device='cuda:0'))
+Eval! ***  431.76496146427013
+73
+372.46350531131236 *** (tensor(484.0254, device='cuda:0'), tensor(485.0998, device='cuda:0'))
+Eval! ***  366.10837353196985
+74
+347.85589246116155 *** (tensor(479.9451, device='cuda:0'), tensor(480.2837, device='cuda:0'))
+Eval! ***  348.0367810182066
+75
+491.6496856947433 *** (tensor(480.6420, device='cuda:0'), tensor(480.9794, device='cuda:0'))
+Eval! ***  373.4235043053434
+76
+373.47142542590683 *** (tensor(486.2858, device='cuda:0'), tensor(485.4621, device='cuda:0'))
+Eval! ***  478.62712153528713
+77
+371.1954718606595 *** (tensor(480.8192, device='cuda:0'), tensor(477.5567, device='cuda:0'))
+Eval! ***  491.6865350669814
+78
+445.0584669715636 *** (tensor(465.5786, device='cuda:0'), tensor(467.9578, device='cuda:0'))
+Eval! ***  438.39157397647216
+79
+487.8134045122604 *** (tensor(506.3611, device='cuda:0'), tensor(507.7845, device='cuda:0'))
+Eval! ***  462.61784822277457
+80
+451.2365889849405 *** (tensor(506.2651, device='cuda:0'), tensor(504.9006, device='cuda:0'))
+Eval! ***  428.48639785143394
+81
+452.0239462306449 *** (tensor(513.2285, device='cuda:0'), tensor(514.7213, device='cuda:0'))
+Eval! ***  423.8812753390601
+82
+470.5593347701651 *** (tensor(523.8369, device='cuda:0'), tensor(525.1335, device='cuda:0'))
+Eval! ***  425.92020495740013
+83
+616.9860739907566 *** (tensor(533.6214, device='cuda:0'), tensor(533.5952, device='cuda:0'))
+Eval! ***  492.54817177852806
+84
+478.1931930170193 *** (tensor(540.5504, device='cuda:0'), tensor(542.1207, device='cuda:0'))
+Eval! ***  437.30351037710756
+85
+429.89237506244416 *** (tensor(546.6537, device='cuda:0'), tensor(548.1631, device='cuda:0'))
+Eval! ***  426.46818472172697
+86
+463.3756253526549 *** (tensor(518.4547, device='cuda:0'), tensor(519.5865, device='cuda:0'))
+Eval! ***  464.40030636708286
+87
+457.41225168716034 *** (tensor(551.5612, device='cuda:0'), tensor(548.6563, device='cuda:0'))
+Eval! ***  422.43732148423686
+88
+483.4590972292897 *** (tensor(545.0347, device='cuda:0'), tensor(547.9016, device='cuda:0'))
+Eval! ***  404.2806189102117
+89
+438.6584587598851 *** (tensor(528.5139, device='cuda:0'), tensor(534.0883, device='cuda:0'))
+Eval! ***  428.5940770687631
+90
+396.5691078960026 *** (tensor(518.5273, device='cuda:0'), tensor(522.2356, device='cuda:0'))
+Eval! ***  434.7787784003605
+91
+455.39231949050185 *** (tensor(564.5157, device='cuda:0'), tensor(563.8798, device='cuda:0'))
+Eval! ***  423.7969439762372
+92
+445.1238595619893 *** (tensor(581.7916, device='cuda:0'), tensor(582.9171, device='cuda:0'))
+Eval! ***  430.83950677494363
+93
+502.0874928535622 *** (tensor(584.3677, device='cuda:0'), tensor(585.0809, device='cuda:0'))
+Eval! ***  497.4901634158764
+94
+549.7403967028883 *** (tensor(538.2153, device='cuda:0'), tensor(537.0489, device='cuda:0'))
+Eval! ***  534.3239376498411
+95
+454.8986872818615 *** (tensor(597.8707, device='cuda:0'), tensor(596.6399, device='cuda:0'))
+Eval! ***  467.66363482784993
+96
+409.45019472807917 *** (tensor(603.3137, device='cuda:0'), tensor(601.8108, device='cuda:0'))
+Eval! ***  486.84333305579054
+97
+403.48294428207333 *** (tensor(600.7975, device='cuda:0'), tensor(602.3082, device='cuda:0'))
+Eval! ***  441.2082841004506
+98
+422.88216259686385 *** (tensor(611.4262, device='cuda:0'), tensor(608.2886, device='cuda:0'))
+Eval! ***  468.56203678155146
+99
+450.40772527857325 *** (tensor(600.4019, device='cuda:0'), tensor(599.0799, device='cuda:0'))
+Eval! ***  515.1449323741725
+100
+436.6812064512934 *** (tensor(613.7247, device='cuda:0'), tensor(614.3047, device='cuda:0'))
+Eval! ***  553.3003596659578
+101
+484.21681163473204 *** (tensor(598.2141, device='cuda:0'), tensor(600.8660, device='cuda:0'))
+Eval! ***  485.6381648112923
+102
+501.9803024882576 *** (tensor(615.4537, device='cuda:0'), tensor(614.7194, device='cuda:0'))
+Eval! ***  557.5725463080673
+103
+404.3793380038385 *** (tensor(607.8035, device='cuda:0'), tensor(608.4146, device='cuda:0'))
+Eval! ***  583.2512025846008
+104
+428.6416915840451 *** (tensor(623.7371, device='cuda:0'), tensor(625.3719, device='cuda:0'))
+Eval! ***  500.93173115227256
+105
+431.4346552158762 *** (tensor(631.0352, device='cuda:0'), tensor(631.3142, device='cuda:0'))
+Eval! ***  671.442850458061
+106
+446.0838552300885 *** (tensor(623.8664, device='cuda:0'), tensor(624.3660, device='cuda:0'))
+Eval! ***  615.8123370132919
+107
+470.70100326462904 *** (tensor(647.3198, device='cuda:0'), tensor(645.7141, device='cuda:0'))
+Eval! ***  530.2254939307195
+108
+529.3418645724634 *** (tensor(642.0747, device='cuda:0'), tensor(642.3962, device='cuda:0'))
+Eval! ***  508.0832348011581
+109
+585.419511642227 *** (tensor(651.4000, device='cuda:0'), tensor(652.6237, device='cuda:0'))
+Eval! ***  515.8391592267358
+110
+425.85765284789426 *** (tensor(601.0237, device='cuda:0'), tensor(600.7495, device='cuda:0'))
+Eval! ***  501.8502006988595
+111
+460.12186878346023 *** (tensor(648.1032, device='cuda:0'), tensor(647.9041, device='cuda:0'))
+Eval! ***  512.7756182048225
+112
+575.6234578160177 *** (tensor(660.0212, device='cuda:0'), tensor(661.6650, device='cuda:0'))
+Eval! ***  400.924146755626
+113
+620.3661792924127 *** (tensor(668.2346, device='cuda:0'), tensor(670.0714, device='cuda:0'))
+Eval! ***  567.7310494819459
+114
+477.8671530171668 *** (tensor(650.2667, device='cuda:0'), tensor(647.9191, device='cuda:0'))
+Eval! ***  617.3268477590938
+115
+459.9022009360631 *** (tensor(657.3676, device='cuda:0'), tensor(653.0848, device='cuda:0'))
+Eval! ***  583.7480673944247
+116
+409.3315285576871 *** (tensor(677.2209, device='cuda:0'), tensor(676.6299, device='cuda:0'))
+Eval! ***  569.2243753579726
+117
+395.46654169558286 *** (tensor(679.8272, device='cuda:0'), tensor(680.5129, device='cuda:0'))
+Eval! ***  563.5348512774541
+118
+432.3386022403825 *** (tensor(677.7051, device='cuda:0'), tensor(675.8353, device='cuda:0'))
+Eval! ***  489.18020997144316
+119
+561.30937030131 *** (tensor(694.2019, device='cuda:0'), tensor(696.0024, device='cuda:0'))
+Eval! ***  506.35766451560147
+120
+399.00476688583757 *** (tensor(693.2905, device='cuda:0'), tensor(693.2277, device='cuda:0'))
+Eval! ***  552.7328717106317
+121
+466.7428899783554 *** (tensor(686.1349, device='cuda:0'), tensor(689.1323, device='cuda:0'))
+Eval! ***  643.5713767390612
+122
+489.9316523838635 *** (tensor(672.8808, device='cuda:0'), tensor(664.1974, device='cuda:0'))
+Eval! ***  564.093469274084
+123
+462.3362457965897 *** (tensor(675.9383, device='cuda:0'), tensor(673.1598, device='cuda:0'))
+Eval! ***  585.9311769088674
+124
+558.1258271830445 *** (tensor(690.2505, device='cuda:0'), tensor(686.3792, device='cuda:0'))
+Eval! ***  563.8413510818831
+125
+538.4711576436747 *** (tensor(697.5605, device='cuda:0'), tensor(695.4432, device='cuda:0'))
+Eval! ***  594.0997887840485
+126
+514.4311788926036 *** (tensor(677.2479, device='cuda:0'), tensor(674.3951, device='cuda:0'))
+Eval! ***  719.3561120679162
+127
+516.2475652197959 *** (tensor(706.1895, device='cuda:0'), tensor(704.6350, device='cuda:0'))
+Eval! ***  570.7935630582771
+128
+554.6636478380565 *** (tensor(695.0676, device='cuda:0'), tensor(691.6097, device='cuda:0'))
+Eval! ***  585.7929869014752
+129
+516.3677284508173 *** (tensor(715.5323, device='cuda:0'), tensor(717.2424, device='cuda:0'))
+Eval! ***  559.7051175670115
+130
+580.2160161930408 *** (tensor(715.7065, device='cuda:0'), tensor(718.6999, device='cuda:0'))
+Eval! ***  663.7554804994013
+131
+567.8747288243989 *** (tensor(720.6046, device='cuda:0'), tensor(721.9899, device='cuda:0'))
+Eval! ***  595.1610485068493
+132
+526.0013573234974 *** (tensor(697.9420, device='cuda:0'), tensor(697.6923, device='cuda:0'))
+Eval! ***  637.2430490076115
+133
+560.1733544745606 *** (tensor(738.9690, device='cuda:0'), tensor(740.4965, device='cuda:0'))
+Eval! ***  642.6193586530082
+134
+537.583532761827 *** (tensor(729.0042, device='cuda:0'), tensor(728.5298, device='cuda:0'))
+Eval! ***  495.8848266059812
+135
+583.3203933712172 *** (tensor(734.3914, device='cuda:0'), tensor(733.3220, device='cuda:0'))
+Eval! ***  459.9720242747031
+136
+519.5832166538265 *** (tensor(725.7114, device='cuda:0'), tensor(729.3649, device='cuda:0'))
+Eval! ***  673.403431450691
+137
+654.7671115284666 *** (tensor(720.9489, device='cuda:0'), tensor(719.0431, device='cuda:0'))
+Eval! ***  549.2971525969191
+138
+606.2188142945733 *** (tensor(743.6129, device='cuda:0'), tensor(742.8411, device='cuda:0'))
+Eval! ***  602.6581136266134
+139
+528.3354858827581 *** (tensor(740.9512, device='cuda:0'), tensor(741.7845, device='cuda:0'))
+Eval! ***  627.3584174415768
+140
+612.3979661895465 *** (tensor(736.0534, device='cuda:0'), tensor(736.3174, device='cuda:0'))
+Eval! ***  671.5083855522813
+141
+610.7777937622978 *** (tensor(740.1074, device='cuda:0'), tensor(740.9264, device='cuda:0'))
+Eval! ***  649.3539779648241
+142
+603.8128058728109 *** (tensor(733.9951, device='cuda:0'), tensor(736.6669, device='cuda:0'))
+Eval! ***  650.1084935877698
+143
+712.3461794251315 *** (tensor(751.4832, device='cuda:0'), tensor(754.2689, device='cuda:0'))
+Eval! ***  685.8422090485059
+144
+620.3491312481058 *** (tensor(752.4033, device='cuda:0'), tensor(750.7345, device='cuda:0'))
+Eval! ***  655.9181823112523
+145
+610.2161706577696 *** (tensor(764.4227, device='cuda:0'), tensor(761.0032, device='cuda:0'))
+Eval! ***  670.2323328773241
+146
+713.5582678828415 *** (tensor(753.5897, device='cuda:0'), tensor(752.7430, device='cuda:0'))
+Eval! ***  596.1586685244004
+147
+659.9629873021829 *** (tensor(771.4539, device='cuda:0'), tensor(769.1461, device='cuda:0'))
+Eval! ***  647.1446315100736
+148
+562.5117063847748 *** (tensor(765.1984, device='cuda:0'), tensor(764.6635, device='cuda:0'))
+Eval! ***  689.5772077743576
+149
+646.443389205396 *** (tensor(773.0308, device='cuda:0'), tensor(772.2549, device='cuda:0'))
+Eval! ***  666.4624924986051
+150
+556.3737588024417 *** (tensor(766.1512, device='cuda:0'), tensor(767.1815, device='cuda:0'))
+Eval! ***  655.4491865861452
+151
+667.6028345975977 *** (tensor(780.7618, device='cuda:0'), tensor(779.0207, device='cuda:0'))
+Eval! ***  703.2262188296384
+152
+639.7415876045103 *** (tensor(782.3972, device='cuda:0'), tensor(781.6584, device='cuda:0'))
+Eval! ***  589.5760742245734
+153
+593.7270901370572 *** (tensor(786.3022, device='cuda:0'), tensor(789.8655, device='cuda:0'))
+Eval! ***  747.5347695364247
+154
+645.5865117790897 *** (tensor(784.2125, device='cuda:0'), tensor(780.3948, device='cuda:0'))
+Eval! ***  741.4694160710226
+155
+760.4687666614783 *** (tensor(782.5519, device='cuda:0'), tensor(782.9469, device='cuda:0'))
+Eval! ***  727.6757027371746
+156
+670.8317374496645 *** (tensor(792.8538, device='cuda:0'), tensor(792.4307, device='cuda:0'))
+Eval! ***  736.7084185115262
+157
+638.0730344834731 *** (tensor(799.0591, device='cuda:0'), tensor(798.9367, device='cuda:0'))
+Eval! ***  739.7826953307683
+158
+713.6236988726382 *** (tensor(778.5071, device='cuda:0'), tensor(775.6837, device='cuda:0'))
+Eval! ***  579.8585727168083
+159
+594.855005084555 *** (tensor(784.2403, device='cuda:0'), tensor(783.2109, device='cuda:0'))
+Eval! ***  699.6353758630543
+160
+642.2998245168353 *** (tensor(796.4506, device='cuda:0'), tensor(793.0292, device='cuda:0'))
+Eval! ***  683.3682588065833
+161
+720.1373790651919 *** (tensor(796.1886, device='cuda:0'), tensor(799.4274, device='cuda:0'))
+Eval! ***  731.7718161456493
+162
+728.8670141098544 *** (tensor(795.0759, device='cuda:0'), tensor(796.7939, device='cuda:0'))
+Eval! ***  710.2123545190135
+163
+737.8091626053522 *** (tensor(797.7767, device='cuda:0'), tensor(795.0614, device='cuda:0'))
+Eval! ***  659.5719143912905
+164
+734.105379182862 *** (tensor(809.5807, device='cuda:0'), tensor(812.5016, device='cuda:0'))
+Eval! ***  708.5090130651681
+165
+682.5931289471783 *** (tensor(805.9066, device='cuda:0'), tensor(807.2904, device='cuda:0'))
+Eval! ***  650.4916284728594
+166
+746.4025926815156 *** (tensor(813.0399, device='cuda:0'), tensor(812.9738, device='cuda:0'))
+Eval! ***  639.7595989413954
+167
+709.5902170411634 *** (tensor(802.9592, device='cuda:0'), tensor(799.7274, device='cuda:0'))
+Eval! ***  741.1921330677065
+168
+726.7841676976178 *** (tensor(821.1217, device='cuda:0'), tensor(821.2872, device='cuda:0'))
+Eval! ***  645.241020810558
+169
+730.0724971894941 *** (tensor(817.8332, device='cuda:0'), tensor(820.1645, device='cuda:0'))
+Eval! ***  708.9565755408623
+170
+707.4597669635206 *** (tensor(822.7129, device='cuda:0'), tensor(824.2765, device='cuda:0'))
+Eval! ***  653.7436498873998
+171
+713.1675325280158 *** (tensor(820.2949, device='cuda:0'), tensor(817.7957, device='cuda:0'))
+Eval! ***  656.3195233629849
+172
+744.6833778466089 *** (tensor(819.7399, device='cuda:0'), tensor(821.2225, device='cuda:0'))
+Eval! ***  767.2885810945719
+173
+745.9543572827346 *** (tensor(832.3560, device='cuda:0'), tensor(828.7919, device='cuda:0'))
+Eval! ***  763.9184208011593
+174
+766.9644359915723 *** (tensor(824.4037, device='cuda:0'), tensor(828.7378, device='cuda:0'))
+Eval! ***  754.4503398321946
+175
+799.0691898573878 *** (tensor(820.9275, device='cuda:0'), tensor(819.8604, device='cuda:0'))
+Eval! ***  684.7174521339244
+176
+797.7964024891149 *** (tensor(833.0137, device='cuda:0'), tensor(831.9224, device='cuda:0'))
+Eval! ***  777.4127930628515
+177
+746.7974261845854 *** (tensor(832.9698, device='cuda:0'), tensor(831.6084, device='cuda:0'))
+Eval! ***  799.6361615043409
+178
+771.6576430289549 *** (tensor(837.8985, device='cuda:0'), tensor(841.1489, device='cuda:0'))
+Eval! ***  749.3958613652726
+179
+692.9215778307183 *** (tensor(838.5809, device='cuda:0'), tensor(839.2250, device='cuda:0'))
+Eval! ***  745.1193420127695
+180
+753.876230315236 *** (tensor(839.9054, device='cuda:0'), tensor(841.0925, device='cuda:0'))
+Eval! ***  711.2970686451298
+181
+711.9197486233658 *** (tensor(839.9766, device='cuda:0'), tensor(841.7098, device='cuda:0'))
+Eval! ***  769.4998572008914
+182
+735.1624251606165 *** (tensor(841.4739, device='cuda:0'), tensor(843.7355, device='cuda:0'))
+Eval! ***  752.7888807496997
+183
+747.1336349549014 *** (tensor(841.3218, device='cuda:0'), tensor(843.8510, device='cuda:0'))
+Eval! ***  721.0353300788543
+184
+691.0161933776194 *** (tensor(853.0717, device='cuda:0'), tensor(855.4453, device='cuda:0'))
+Eval! ***  767.0454862513553
+185
+745.0038529417744 *** (tensor(851.1607, device='cuda:0'), tensor(848.9246, device='cuda:0'))
+Eval! ***  740.2737270970049
+186
+739.256160843641 *** (tensor(850.9551, device='cuda:0'), tensor(854.5812, device='cuda:0'))
+Eval! ***  799.5842428672487
+187
+733.1874342546181 *** (tensor(849.2670, device='cuda:0'), tensor(843.7020, device='cuda:0'))
+Eval! ***  676.2403962531847
+188
+719.0590279062749 *** (tensor(852.1065, device='cuda:0'), tensor(850.8687, device='cuda:0'))
+Eval! ***  817.6481342585604
+189
+790.6323067819782 *** (tensor(857.5081, device='cuda:0'), tensor(857.0847, device='cuda:0'))
+Eval! ***  786.9217984319226
+190
+747.6034933961289 *** (tensor(864.2732, device='cuda:0'), tensor(859.0823, device='cuda:0'))
+Eval! ***  747.100852150666
+191
+747.4923978695462 *** (tensor(868.9181, device='cuda:0'), tensor(867.4920, device='cuda:0'))
+Eval! ***  762.8441088134251
+192
+766.3708410385312 *** (tensor(863.7193, device='cuda:0'), tensor(862.8104, device='cuda:0'))
+Eval! ***  782.7514765324062
+193
+750.2899840917092 *** (tensor(863.6859, device='cuda:0'), tensor(861.5326, device='cuda:0'))
+Eval! ***  760.8876919845554
+194
+745.4530552769478 *** (tensor(869.2458, device='cuda:0'), tensor(871.1725, device='cuda:0'))
+Eval! ***  753.4087000704927
+195
+773.5742844386349 *** (tensor(876.0612, device='cuda:0'), tensor(873.4936, device='cuda:0'))
+Eval! ***  788.1661482894197
+196
+747.8245310036148 *** (tensor(865.8455, device='cuda:0'), tensor(870.2604, device='cuda:0'))
+Eval! ***  648.3765259519251
+197
+761.7432826734508 *** (tensor(873.3372, device='cuda:0'), tensor(876.3448, device='cuda:0'))
+Eval! ***  797.7695766376204
+198
+741.5198006262675 *** (tensor(867.6460, device='cuda:0'), tensor(871.6641, device='cuda:0'))
+Eval! ***  760.3240585510736
+199
+759.4816059721315 *** (tensor(876.7722, device='cuda:0'), tensor(877.5453, device='cuda:0'))
+Eval! ***  726.4471001303643
+200
+742.7339736778872 *** (tensor(873.0771, device='cuda:0'), tensor(868.3873, device='cuda:0'))
+Eval! ***  776.0943529634171
+201
+756.5146054873504 *** (tensor(885.4800, device='cuda:0'), tensor(881.1340, device='cuda:0'))
+Eval! ***  781.3823305425702
+202
+733.9018467418838 *** (tensor(888.1183, device='cuda:0'), tensor(881.6920, device='cuda:0'))
+Eval! ***  667.5071746645924
+203
+679.8289327052511 *** (tensor(876.8060, device='cuda:0'), tensor(880.3315, device='cuda:0'))
+Eval! ***  792.0690750891625
+204
+747.4910848693281 *** (tensor(885.3098, device='cuda:0'), tensor(890.2543, device='cuda:0'))
+Eval! ***  766.3844902741893
+205
+755.1784587613406 *** (tensor(887.3272, device='cuda:0'), tensor(885.4533, device='cuda:0'))
+Eval! ***  788.8641559557733
+206
+740.5260097478256 *** (tensor(874.5460, device='cuda:0'), tensor(878.3880, device='cuda:0'))
+Eval! ***  729.0945070109052
+207
+741.6575784018698 *** (tensor(892.7289, device='cuda:0'), tensor(895.4361, device='cuda:0'))
+Eval! ***  802.3664495640821
+208
+786.2524321387439 *** (tensor(887.9688, device='cuda:0'), tensor(892.7192, device='cuda:0'))
+Eval! ***  767.7638892143166
+209
+741.6391327746439 *** (tensor(885.7193, device='cuda:0'), tensor(890.6300, device='cuda:0'))
+Eval! ***  809.5673301616333
+210
+800.1869904288042 *** (tensor(890.3527, device='cuda:0'), tensor(886.4647, device='cuda:0'))
+Eval! ***  829.2935884255145
+211
+780.6164348148652 *** (tensor(893.4181, device='cuda:0'), tensor(899.2939, device='cuda:0'))
+Eval! ***  803.8954839359286
+212
+783.9103978912852 *** (tensor(886.6586, device='cuda:0'), tensor(884.0436, device='cuda:0'))
+Eval! ***  797.7940656725267
+213
+767.5443630056566 *** (tensor(889.2068, device='cuda:0'), tensor(889.6703, device='cuda:0'))
+Eval! ***  750.4750531555258
+214
+760.6140921781446 *** (tensor(895.6821, device='cuda:0'), tensor(896.0458, device='cuda:0'))
+Eval! ***  795.0129984584011
+215
+789.0491683118465 *** (tensor(902.3723, device='cuda:0'), tensor(903.0172, device='cuda:0'))
+Eval! ***  810.7914786556805
+216
+786.1713166267394 *** (tensor(888.5002, device='cuda:0'), tensor(890.2670, device='cuda:0'))
+Eval! ***  822.0314311982661
+217
+788.2276842862863 *** (tensor(896.5379, device='cuda:0'), tensor(895.9241, device='cuda:0'))
+Eval! ***  806.1444575343095
+218
+769.1794694363227 *** (tensor(895.2024, device='cuda:0'), tensor(898.8064, device='cuda:0'))
+Eval! ***  811.1768239758169
+219
+827.5952837109536 *** (tensor(902.4118, device='cuda:0'), tensor(905.7789, device='cuda:0'))
+Eval! ***  778.5988193514142
+220
+804.2712729683162 *** (tensor(912.5189, device='cuda:0'), tensor(906.7089, device='cuda:0'))
+Eval! ***  761.8767354083328
+221
+751.9481539596266 *** (tensor(906.9733, device='cuda:0'), tensor(904.8452, device='cuda:0'))
+Eval! ***  818.7954904227689
+222
+785.7505593687013 *** (tensor(910.0854, device='cuda:0'), tensor(906.7081, device='cuda:0'))
+Eval! ***  827.833143206731
+223
+746.9712367448498 *** (tensor(912.0526, device='cuda:0'), tensor(915.6857, device='cuda:0'))
+Eval! ***  821.1300363881912
+224
+806.4469002115038 *** (tensor(906.6172, device='cuda:0'), tensor(903.9807, device='cuda:0'))
+Eval! ***  811.6219697945105
+225
+753.6212035025663 *** (tensor(915.3880, device='cuda:0'), tensor(918.4846, device='cuda:0'))
+Eval! ***  807.0192368345664
+226
+790.0522715916047 *** (tensor(916.4457, device='cuda:0'), tensor(917.4283, device='cuda:0'))
+Eval! ***  742.2081007346865
+227
+781.7310334091474 *** (tensor(914.1269, device='cuda:0'), tensor(916.0242, device='cuda:0'))
+Eval! ***  789.1984110153323
+228
+771.3997568620072 *** (tensor(923.7271, device='cuda:0'), tensor(921.3780, device='cuda:0'))
+Eval! ***  821.0045685188239
+229
+757.555259617049 *** (tensor(915.5148, device='cuda:0'), tensor(914.9329, device='cuda:0'))
+Eval! ***  770.2346631631436
+230
+794.202084602618 *** (tensor(922.6514, device='cuda:0'), tensor(924.0532, device='cuda:0'))
+Eval! ***  834.8148983047353
+231
+785.6197066561238 *** (tensor(904.9632, device='cuda:0'), tensor(903.2480, device='cuda:0'))
+Eval! ***  770.0824146459183
+232
+786.7793806216525 *** (tensor(922.3854, device='cuda:0'), tensor(919.7367, device='cuda:0'))
+Eval! ***  782.7532616222697
+233
+774.8792549278946 *** (tensor(928.3321, device='cuda:0'), tensor(923.9669, device='cuda:0'))
+Eval! ***  819.0943664694022
+234
+753.8296305707406 *** (tensor(924.3771, device='cuda:0'), tensor(922.4936, device='cuda:0'))
+Eval! ***  801.8681746120654
+235
+797.2055017628638 *** (tensor(925.0345, device='cuda:0'), tensor(930.2982, device='cuda:0'))
+Eval! ***  791.9616555939209
+236
+743.2747951551264 *** (tensor(926.6403, device='cuda:0'), tensor(926.3088, device='cuda:0'))
+Eval! ***  782.1244654374788
+237
+822.898970478661 *** (tensor(931.4337, device='cuda:0'), tensor(932.0673, device='cuda:0'))
+Eval! ***  769.0719501180798
+238
+819.0095266657323 *** (tensor(930.8196, device='cuda:0'), tensor(929.0412, device='cuda:0'))
+Eval! ***  831.1027700092204
+239
+780.1097178700127 *** (tensor(936.7195, device='cuda:0'), tensor(939.1051, device='cuda:0'))
+Eval! ***  753.8910469518356
+240
+767.203695026893 *** (tensor(933.6905, device='cuda:0'), tensor(932.8031, device='cuda:0'))
+Eval! ***  816.3423682225558
+241
+776.5742745998693 *** (tensor(936.1926, device='cuda:0'), tensor(936.4076, device='cuda:0'))
+Eval! ***  835.8170456329257
+242
+778.5019056617401 *** (tensor(936.4044, device='cuda:0'), tensor(938.3101, device='cuda:0'))
+Eval! ***  755.0892581484783
+243
+737.3730569211931 *** (tensor(936.3120, device='cuda:0'), tensor(938.1121, device='cuda:0'))
+Eval! ***  834.4843283799329
+244
+769.7078027103923 *** (tensor(935.0405, device='cuda:0'), tensor(932.7237, device='cuda:0'))
+Eval! ***  746.5150905977204
+245
+792.5003646067637 *** (tensor(941.7899, device='cuda:0'), tensor(938.4952, device='cuda:0'))
+Eval! ***  791.4775166918388
+246
+765.6405356995093 *** (tensor(933.3247, device='cuda:0'), tensor(932.4608, device='cuda:0'))
+Eval! ***  821.1731162149499
+247
+771.5977382832931 *** (tensor(943.4962, device='cuda:0'), tensor(946.5301, device='cuda:0'))
+Eval! ***  772.4746928410451
+248
+773.8565340099713 *** (tensor(947.0026, device='cuda:0'), tensor(948.4589, device='cuda:0'))
+Eval! ***  799.6795942455227
+249
+753.644004700839 *** (tensor(942.4094, device='cuda:0'), tensor(945.0998, device='cuda:0'))
+Eval! ***  830.8265073674668
+250
+760.2330023008866 *** (tensor(951.8619, device='cuda:0'), tensor(947.9150, device='cuda:0'))
+Eval! ***  825.5776793245251
+251
+791.7031919916581 *** (tensor(950.1106, device='cuda:0'), tensor(949.9600, device='cuda:0'))
+Eval! ***  754.8007168148883
+252
+773.3711796295345 *** (tensor(946.8480, device='cuda:0'), tensor(948.7756, device='cuda:0'))
+Eval! ***  792.4424649141399
+253
+798.7507160984779 *** (tensor(954.4180, device='cuda:0'), tensor(954.7145, device='cuda:0'))
+Eval! ***  783.6708099203097
+254
+753.7685398611354 *** (tensor(952.4873, device='cuda:0'), tensor(952.5652, device='cuda:0'))
+Eval! ***  760.3427008543679
+255
+772.9985512781541 *** (tensor(949.0168, device='cuda:0'), tensor(947.2465, device='cuda:0'))
+Eval! ***  822.0575824747085
+256
+751.417103495155 *** (tensor(947.3984, device='cuda:0'), tensor(949.6792, device='cuda:0'))
+Eval! ***  829.4329464376498
+257
+797.9630329127745 *** (tensor(957.2245, device='cuda:0'), tensor(956.6296, device='cuda:0'))
+Eval! ***  788.0710268203094
+258
+794.0044070482355 *** (tensor(956.2561, device='cuda:0'), tensor(958.4846, device='cuda:0'))
+Eval! ***  776.9963111833866
+259
+810.4186338793826 *** (tensor(954.0450, device='cuda:0'), tensor(953.9683, device='cuda:0'))
+Eval! ***  784.4863402353518
+260
+811.0467507657312 *** (tensor(962.4565, device='cuda:0'), tensor(962.9175, device='cuda:0'))
+Eval! ***  825.1670705620019
+261
+783.0036942925632 *** (tensor(963.1462, device='cuda:0'), tensor(961.2203, device='cuda:0'))
+Eval! ***  784.5246513416148
+262
+778.2084841384791 *** (tensor(957.3124, device='cuda:0'), tensor(954.5369, device='cuda:0'))
+Eval! ***  809.4531699816749
+263
+779.7475578155603 *** (tensor(960.3797, device='cuda:0'), tensor(961.3298, device='cuda:0'))
+Eval! ***  706.7193650519575
+264
+770.3115948435852 *** (tensor(967.7875, device='cuda:0'), tensor(963.6204, device='cuda:0'))
+Eval! ***  842.8635360509246
+265
+812.3821113036339 *** (tensor(961.7072, device='cuda:0'), tensor(964.5978, device='cuda:0'))
+Eval! ***  818.7874013916264
+266
+816.7601239532523 *** (tensor(966.4910, device='cuda:0'), tensor(967.1898, device='cuda:0'))
+Eval! ***  783.1419705652492
+267
+804.5029311477874 *** (tensor(965.8943, device='cuda:0'), tensor(968.8098, device='cuda:0'))
+Eval! ***  667.4077942772992
+268
+807.9326144366041 *** (tensor(965.7873, device='cuda:0'), tensor(964.5882, device='cuda:0'))
+Eval! ***  761.9089271857669
+269
+743.9171427314654 *** (tensor(961.4318, device='cuda:0'), tensor(961.8607, device='cuda:0'))
+Eval! ***  840.7593896594068
+270
+816.1855299241805 *** (tensor(971.6450, device='cuda:0'), tensor(969.6353, device='cuda:0'))
+Eval! ***  702.6253390322026
+271
+795.6283337545938 *** (tensor(968.6006, device='cuda:0'), tensor(969.3984, device='cuda:0'))
+Eval! ***  718.2612798341855
+272
+776.9568747632422 *** (tensor(967.9212, device='cuda:0'), tensor(969.5736, device='cuda:0'))
+Eval! ***  817.5011357220554
+273
+788.4819174541813 *** (tensor(967.2165, device='cuda:0'), tensor(967.1681, device='cuda:0'))
+Eval! ***  687.5763417668334
+274
+807.308221453981 *** (tensor(973.7748, device='cuda:0'), tensor(973.4648, device='cuda:0'))
+Eval! ***  741.9132663725388
+275
+819.2123586218955 *** (tensor(977.9869, device='cuda:0'), tensor(974.3067, device='cuda:0'))
+Eval! ***  787.3354267420026
+276
+813.1227022477124 *** (tensor(971.8365, device='cuda:0'), tensor(972.1796, device='cuda:0'))
+Eval! ***  846.9985950597608
+277
+
