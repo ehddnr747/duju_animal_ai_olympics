@@ -53,6 +53,8 @@ class VanillaSACPolicy(nn.Module):
 
         y_t = torch.tanh(x_t)
         print("y_t",y_t.shape,y_t)
+
+        ### Change this to sum. check. this code has error before remove this comment!
         logp -= torch.log(1 - torch.pow(y_t, 2) + 1e-6)
 
         return y_t, logp

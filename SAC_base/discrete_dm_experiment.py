@@ -9,20 +9,20 @@ from Model.ReplayBuffer import ReplayBuffer
 from Model.SAC_base import target_initialize
 
 from Model.Discrete_SAC import DiscreteSAC
-from Model.Discrete_SAC import train_discrete_SAC
+from Model.Discrete_SAC import train_discrete_SAC_max
+
+exp_title = "SAC_DM_Discrete_internal"
 
 env = suite.load(domain_name="cartpole",task_name="swingup")
 
 state_dim = duju_utils.state_1d_dim_calc(env)[-1]
-action_dim = 5
+action_dim = 2
 
 action_dict = { 0 : -1.0,
-               1 : -0.5,
-               2 : 0.0,
-               3 : 0.5,
-               4 : 1.0 }
+               1 : 1.0 }
 
-reward_compensate = 10 # inverse alpha
+reward_compensate = 10
+alpha = 1.0
 
 lr = 1e-3
 gamma = 0.99
@@ -68,9 +68,9 @@ for epi_i in range(1, max_episode + 1):
 
     for _idx in range(1000):
         #print(_idx)
-        max_q1, max_q2 = train_discrete_SAC(q_main, q_target, replay_buffer, batch_size, gamma)
+        max_q1, max_q2, mean_entropy, mean_reward = train_discrete_SAC_max(q_main, q_target, replay_buffer, batch_size, gamma, alpha)
 
-    print(ep_reward, "***", (max_q1, max_q2))
+    print(ep_reward, "***", (float(max_q1), float(max_q2), float(mean_entropy), float(mean_reward)))
 
     timestep = env.reset()
     end, _, _, s = timestep
@@ -80,7 +80,7 @@ for epi_i in range(1, max_episode + 1):
     eval_ep_reward = 0.0
     eval_action = []
 
-    if (epi_i % 1) == 0 :
+    if (epi_i % 25) == 0 :
         while not end:
             a_category = q_main.get_max_action(torch.FloatTensor(s).to(device).view(1,-1))
             a_deploy = action_dict[a_category]
@@ -102,5 +102,10 @@ for epi_i in range(1, max_episode + 1):
 
         print("Eval! *** ", eval_ep_reward)
         #print(eval_action)
+
+    if (epi_i % 10) == 0:
+        print("Networks Saved!")
+        duju_utils.torch_network_save(q_main,"../trained/"+exp_title+"_q_main_"+str(epi_i)+".torch")
+        duju_utils.torch_network_save(q_target, "../trained/"+exp_title+"_q_target_"+str(epi_i)+".torch")
 
 cv2.destroyAllWindows()

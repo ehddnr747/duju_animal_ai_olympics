@@ -21,10 +21,26 @@ class ImageBuffer(object):
         self.full_count = 0
 
 
+    # # [height, width, channel]
+    # def dm_add(self, frame):
+    #     frame = np.moveaxis(frame, [0, 1, 2], [1, 2, 0])
+    #     frame = (frame / 128.0) - 1.0
+    #
+    #     if self.count < self.buffer_size:
+    #         self.count += 1
+    #         self.buffer.append(frame)
+    #     else:
+    #         self.buffer.pop(0)
+    #         self.buffer.append(frame)
+    #         self.full_count += 1
+
     # [height, width, channel]
-    def dm_add(self, frame):
-        frame = np.moveaxis(frame, [0, 1, 2], [1, 2, 0])
-        frame = (frame / 128.0) - 1.0
+    def dm_add_gray(self, frame):
+        frame = frame / 256.0
+        frame = frame[:, :, [0]] * 0.2989 + frame[:, :, [1]] * 0.5870 + frame[:, :, [2]] * 0.1140
+        frame = np.moveaxis(frame, [0, 1, 2], [1, 2, 0]) # [1, height, width]
+
+        assert frame.shape == (1, self.height, self.width)
 
         if self.count < self.buffer_size:
             self.count += 1
@@ -34,17 +50,18 @@ class ImageBuffer(object):
             self.buffer.append(frame)
             self.full_count += 1
 
+
     def get_state(self, idx):
-        assert idx > 0 and idx <= self.count + self.full_count
+        assert idx > self.full_count
+        assert idx <= self.count + self.full_count
 
         if self.count < self.buffer_size:
             temp_idx = idx
         else:
             temp_idx = idx - self.full_count
 
-        assert temp_idx > 0, "temp_idx : " + str(temp_idx)
-
         return_array = np.concatenate(self.buffer[temp_idx - self.stepsize: temp_idx], axis=0)
+        # because image idx starts from 1 and list idx starts from 0
 
         assert return_array.shape == (self.step_channelsize, self.height, self.width)
 
@@ -52,5 +69,10 @@ class ImageBuffer(object):
         #[stepsize, height, width]
 
     def get_state_and_next(self, idx):
+
         assert idx > 0 and idx < self.count + self.full_count
+
         return self.get_state(idx), self.get_state(idx+1)
+
+    def get_current_index(self):
+        return self.count + self.full_count
