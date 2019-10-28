@@ -59,8 +59,8 @@ class Triple_DQN(nn.Module):
 
         self.optimizer = optim.Adam(self.parameters(), lr, weight_decay=1e-6)
 
-        self.milestones = [100000, 200000, 400000]
-        self.step_lr_scheduler = optim.lr_scheduler.MultiStepLR(self.optimizer, milestones=self.milestones,gamma=1.0/3.0)
+        self.milestones = [100000000]
+        self.step_lr_scheduler = optim.lr_scheduler.MultiStepLR(self.optimizer, milestones=self.milestones,gamma=0.5)
 
     def forward(self, x):
         # dim x : [batch, input_channel_size, height, width]

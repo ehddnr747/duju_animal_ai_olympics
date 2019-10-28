@@ -15,8 +15,8 @@ from Model.triple_dqn import train_triple_dqn
 exp_title = "Conv_Discrete_TDQN_celu_larger networks"
 print(exp_title)
 
-train_print_flag = False
-eval_print_flag = False
+train_print_flag = True
+eval_print_flag = True
 
 load_flag = False
 
@@ -29,7 +29,7 @@ step_size = 3
 channel_size = 1
 height = 48
 width = 64
-skip_frame = 1
+skip_frame = 4
 
 input_channel_size = step_size * channel_size
 
@@ -45,7 +45,7 @@ reward_compensate = 1
 print("reward_compensate", reward_compensate)
 print("skip_frame", skip_frame)
 
-lr = 4e-5
+lr = 5e-6
 gamma = 0.99
 device = torch.device("cuda")
 max_episode = 10000
@@ -87,8 +87,7 @@ for epi_i in range(1, max_episode + 1):
     s_idx = image_buffer.get_current_index()
     s_frame = image_buffer.get_state(s_idx)
 
-    pseudo_sigma = np.maximum(1- epi_i/100.0, 0.1)
-    epsilon = np.random.sample() * 0.1 # mean 0.05 min 0.0 max 0.1
+    epsilon = np.maximum((1- epi_i/100.0)/2.0, np.random.sample() * 0.1) # mean 0.05 min 0.0 max 0.1
 
     while not end:
         a_category = q_main.epsilon_sample(
@@ -114,11 +113,11 @@ for epi_i in range(1, max_episode + 1):
                           np.array([end]),
                           np.array([s2_idx])    )
 
-        frame = env.physics.render(camera_id=0, height=480, width=640)  # [height, width, channel]
+        #frame = env.physics.render(camera_id=0, height=480, width=640)  # [height, width, channel]
 
         if train_print_flag:
-            #cv2.imshow("train", cv2.resize(np.moveaxis(s2_frame,[0,1,2],[2,0,1]),(width*4,height*4)))
-            cv2.imshow("train", frame)
+            cv2.imshow("train", cv2.resize(np.moveaxis(s2_frame,[0,1,2],[2,0,1]),(width*4,height*4)))
+            #cv2.imshow("train", frame)
             cv2.waitKey(1)
 
         s_idx = s2_idx
@@ -128,9 +127,9 @@ for epi_i in range(1, max_episode + 1):
 
     for _idx in range(int(1000)):
         #print(_idx)
-            mean_q1, max_q1, min_q1, mean_q2, mean_reward = train_triple_dqn(q_main, q_target, replay_buffer, image_buffer, batch_size, gamma)
+            mean_q1, min_q1, max_q1, mean_q2, mean_reward = train_triple_dqn(q_main, q_target, replay_buffer, image_buffer, batch_size, gamma)
 
-    print(int(ep_reward), "***", (float(mean_q1), float(max_q1), float(min_q1), float(mean_q2), float(mean_reward)))
+    print(int(ep_reward), "***", (float(mean_q1), float(min_q1), float(max_q1), float(mean_q2), float(mean_reward)))
 
     #### Eval ####
 
