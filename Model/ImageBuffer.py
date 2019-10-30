@@ -50,6 +50,23 @@ class ImageBuffer(object):
             self.buffer.append(frame)
             self.full_count += 1
 
+    def animal_add(self, frame):
+
+        #store as np.ubyte
+
+        frame = np.moveaxis(frame, [0, 1, 2], [1, 2, 0]) * 256
+        frame = np.array(frame, dtype=np.ubyte)
+
+        assert frame.shape == (self.channel_size, self.height, self.width)
+
+        if self.count < self.buffer_size:
+            self.count += 1
+            self.buffer.append(frame)
+        else:
+            self.buffer.pop(0)
+            self.buffer.append(frame)
+            self.full_count += 1
+
 
     def get_state(self, idx):
         assert idx > self.full_count
@@ -65,7 +82,7 @@ class ImageBuffer(object):
 
         assert return_array.shape == (self.step_channelsize, self.height, self.width)
 
-        return return_array
+        return return_array / np.array(256, dtype=np.float32)
         #[stepsize, height, width]
 
     def get_state_and_next(self, idx):
