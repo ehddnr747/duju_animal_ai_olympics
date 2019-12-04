@@ -85,6 +85,23 @@ class ImageBuffer(object):
         return return_array / np.array(256, dtype=np.float32)
         #[stepsize, height, width]
 
+    def get_current_image(self, idx):
+
+        assert idx > self.full_count
+        assert idx <= self.count + self.full_count
+
+        if self.count < self.buffer_size:
+            temp_idx = idx
+        else:
+            temp_idx = idx - self.full_count
+
+        return_array = self.buffer[temp_idx-1]
+        # because image idx starts from 1 and list idx starts from 0
+
+        assert return_array.shape == (self.channel_size, self.height, self.width)
+
+        return return_array / np.array(256, dtype=np.float32)
+
     def get_state_and_next(self, idx):
 
         assert idx > 0 and idx < self.count + self.full_count

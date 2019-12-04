@@ -105,3 +105,11 @@ venv.bak/
 
 # torch trained
 *.torch
+*.avi
+*.png
+*.jpg
+
+graph/
+MNIST/
+video/
+image/

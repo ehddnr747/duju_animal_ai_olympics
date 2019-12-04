@@ -137,6 +137,13 @@ class PERBuffer(ReplayBuffer):
         self.current_step += 1
         self.beta = self.initial_beta + (1 - self.initial_beta) * self.current_step / self.max_step
 
+    def sample_image_uniform(self, batch_size):
+        batch_size = min(self.count, batch_size)
+
+        sample_idx = np.random.choice(self.count, batch_size, replace=False)
+
+        return self.s_buffer[sample_idx]
+
     def sample_batch(self, batch_size):
 
         assert self.count >= batch_size
